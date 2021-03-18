@@ -65,3 +65,14 @@ as recommended in the paper.
 Discriminator loss is a simple **Binary cross entropy** loss. Generator's loss is the sum of **Binary cross entropy loss** and **L1** loss.
 
 # Results
+**First column is the given input image, second is predicted coloring and third is the ground truth. As you can see the model isn't perfect, but in my opinion 
+it is still amazing how well neural networks do at image colorization, especially considering that once I read the paper and played around with implementation for few days this task wasn't really too hard.** 
+
+<p align='center'>
+  <img src='https://github.com/ty-on-h12/pix2pix-pytorch/blob/master/imgs/fig_1_10300.png'>
+  <img src='https://github.com/ty-on-h12/pix2pix-pytorch/blob/master/imgs/fig_1_8500.png'>
+  <img src='https://github.com/ty-on-h12/pix2pix-pytorch/blob/master/imgs/fig_1_9500.png'>
+  <img src='https://github.com/ty-on-h12/pix2pix-pytorch/blob/master/imgs/fig_1_9600.png'>
+</p>
+
+**Any sugestions for improvement appreciated :)**
