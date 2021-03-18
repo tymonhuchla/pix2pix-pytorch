@@ -51,12 +51,17 @@ an images and classifies each patch meaning it outputs a matrix of predictions r
 
 # Training
 
-Becouse this project is a part of a bigger project (face image restoration) I have used CelebA dataset. For my target images I have used the regular CelebA images 
+Because this project is a part of a bigger project (face image restoration) I have used CelebA dataset. For my target images I have used the regular CelebA images 
 and for input images I have just reduced the number of channels from 3 to 1 in the original images. CelebA is included in <code>torch.datasets</code> however I 
 prefered to download it myself. You can get the data from my 
 <a href='https://drive.google.com/file/d/1n7PHKT7DLkBJHi7yZNGMCXTMNfAohtMO/view?usp=sharing'>google drive</a> or 
 <a href='http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html'>official CelebA website</a>.
 
+CelebA is a big dataset so training for just epoch took ~ 5hrs on Colab and by that time the model already started yielding satisfying results.
 
+Both the generator and the discriminator were trained with Adam optimizer with <code>beta1=0.5</code>, <code>beta2=0.99</code> and <code>learning_rate=2e-4</code>
+as recommended in the paper.
+
+Discriminator loss is a simple **Binary cross entropy** loss. Generator's loss is the sum of **Binary cross entropy loss** and **L1** loss.
 
 # Results
